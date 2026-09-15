@@ -1,0 +1,27 @@
+# Local research, generated editions and reading history
+/.scratch/
+/.digest-write.lock
+/history/
+/index.jsonl
+/access-failures.jsonl
+/blocked.txt
+/digest-*.md
+/????-??-??.md
+/claude-????-??-??.md
+
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Credentials and machine-specific files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/

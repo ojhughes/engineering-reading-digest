@@ -1,0 +1,1233 @@
+# Feed index for the engineering reading digest.
+#
+# Feed observations are historical and method-specific. last_checked records
+# attempts; latest_ok and latest_item change only after successful parsing.
+# Quiet feeds are checked weekly and dormant feeds monthly, never excluded.
+# Existing successful observations survive failures; see access-failures.jsonl.
+# Explicit slice fields assign article topics independently of publisher type.
+#
+# This list is a floor, not a route. Workers read the feeds for their slice
+# as a starting point, reserving roughly a quarter of effort for other sources.
+# Propose additions in the run report.
+#
+# Provider neutrality: the cloud vendor feeds are included because they
+# occasionally carry real engineering content, but a digest must not end up
+# dominated by any one of them.
+
+verified_at: 2026-09-15
+counts:
+  slice_a: 50
+  slice_b: 35
+  slice_c: 33
+  total_feeds: 118
+
+feeds:
+
+  # ---- Feed group; explicit slice fields determine topic ownership ----
+  - name: "Airbnb Engineering"
+    slice: A
+    feed: https://medium.com/feed/airbnb-engineering
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T17:06:18+00:00"
+    note: >-
+      Medium-hosted. Feed carries full text.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "All Things Distributed"
+    slice: A
+    feed: https://www.allthingsdistributed.com/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-08T06:00:00-08:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Antithesis"
+    slice: A
+    feed: https://antithesis.com/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-18T12:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Booking.com Engineering"
+    slice: A
+    feed: https://medium.com/feed/booking-com-development
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14T09:46:34+00:00"
+    note: >-
+      Medium-hosted. Feed carries full text.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Brendan Gregg"
+    slice: A
+    feed: https://www.brendangregg.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-02-07T00:00:00+11:00"
+    cadence: "quiet"
+    note: >-
+      Systems performance. Low frequency but high value when it publishes.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-22"
+  - name: "ByteByteGo"
+    slice: A
+    feed: https://blog.bytebytego.com/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T19:31:01+00:00"
+    note: >-
+      This is ByteByteGo. System design explainers rather than primary engineering reports, so use it as a pointer.
+    name: "ByteByteGo"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Canva Engineering"
+    slice: A
+    feed: https://www.canva.dev/blog/engineering/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-22T00:00:01+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "ClickHouse"
+    slice: A
+    feed: https://clickhouse.com/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T14:00:00+00:00"
+    note: >-
+      Site-wide feed, not blog-only. Vendor benchmarks against competitors appear here and must be labelled as vendor-run.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Cloudflare"
+    slice: A
+    feed: https://blog.cloudflare.com/rss/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T13:00:00+00:00"
+    note: >-
+      High volume and heavily mixed with product marketing. Filter hard.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Dan Luu"
+    slice: A
+    feed: https://danluu.com/atom.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-07T00:00:00+00:00"
+    note: >-
+      Independent. Infrequent, usually long and measurement led.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Datadog Engineering"
+    slice: A
+    feed: https://www.datadoghq.com/blog/engineering/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-01T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Discord"
+    slice: A
+    feed: https://discord.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-08T00:00:00+00:00"
+    note: >-
+      The blog index prints no dates in its markup. Use the feed for dates.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Dropbox Tech"
+    slice: A
+    feed: https://dropbox.tech/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-31T10:00:00-07:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "DuckDB"
+    slice: A
+    feed: https://duckdb.org/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-02T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "EDB Postgres"
+    slice: A
+    feed: https://www.enterprisedb.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-07T11:54:39-04:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Elastic"
+    slice: A
+    feed: https://www.elastic.co/blog/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T00:00:00+00:00"
+    note: >-
+      Site-wide feed. Mostly product news, with engineering posts a minority.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Engineering at Meta"
+    slice: A
+    feed: https://engineering.fb.com/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-03T16:00:20+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Etsy Engineering"
+    slice: A
+    feed: https://www.etsy.com/codeascraft/rss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-31T13:30:55-04:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Fly.io"
+    slice: A
+    feed: https://fly.io/blog/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-03T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "GitHub Engineering"
+    slice: A
+    feed: https://github.blog/engineering/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-02T18:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Grafana Labs"
+    slice: A
+    feed: https://grafana.com/blog/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14T18:02:58"
+    note: >-
+      The blog index prints no dates in its markup. Use the feed for dates.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Hillel Wayne"
+    slice: A
+    feed: https://buttondown.com/hillelwayne/rss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-01T18:30:01+00:00"
+    note: >-
+      Formal methods and software correctness.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Honeycomb"
+    slice: A
+    feed: https://www.honeycomb.io/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14T13:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Jane Street Tech"
+    slice: A
+    feed: https://blog.janestreet.com/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14T00:00:00+00:00"
+    note: >-
+      Functional programming and low latency systems.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Julia Evans"
+    slice: A
+    feed: https://jvns.ca/atom.xml
+    latest_ok: "2026-09-15"
+    latest_item: 2026-07-21
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Marc Brooker"
+    slice: A
+    feed: https://brooker.co.za/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-29T00:00:00+00:00"
+    note: >-
+      Independent. Distributed systems and cloud internals.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "MongoDB Engineering"
+    slice: A
+    feed: https://www.mongodb.com/blog/rss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-06-25T17:28:40+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Murat Demirbas"
+    slice: A
+    feed: https://muratbuffalo.blogspot.com/feeds/posts/default
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-12T01:36:27.167000-04:00"
+    note: >-
+      Independent. Distributed systems paper reviews.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Neo4j Developer Blog"
+    slice: A
+    feed: https://medium.com/feed/neo4j
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-07"
+    note: >-
+      Medium-hosted mirror of Neo4j developer content.
+    last_checked: "2026-09-15"
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Neon"
+    slice: A
+    feed: https://neon.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14T12:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Netflix Technology Blog"
+    slice: A
+    feed: https://netflixtechblog.com/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-28T16:01:02+00:00"
+    note: >-
+      The HTML site returns 403 to fetchers. The feed works, so always go through it for this publisher.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Percona"
+    slice: A
+    feed: https://www.percona.com/blog/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T11:52:54+00:00"
+    note: >-
+      High volume and much of it routine. Skim for storage engine and replication internals.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Pinterest Engineering"
+    slice: A
+    feed: https://medium.com/feed/pinterest-engineering
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11T15:01:03+00:00"
+    note: >-
+      Medium-hosted. Feed carries full text.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "PlanetScale"
+    slice: A
+    feed: https://planetscale.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Postgres Weekly source: Crunchy Data"
+    slice: A
+    feed: https://www.crunchydata.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-02T13:00:00-04:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "QuestDB"
+    slice: A
+    feed: https://questdb.com/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Redpanda"
+    slice: A
+    feed: https://www.redpanda.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Render"
+    slice: A
+    feed: https://render.com/blog/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: 2026-09-15
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "ScyllaDB"
+    slice: A
+    feed: https://www.scylladb.com/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14T13:02:07+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Sentry"
+    slice: A
+    feed: https://blog.sentry.io/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11T09:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Shopify Engineering"
+    slice: A
+    feed: https://shopify.engineering/blog.atom
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-10T12:27:06+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "SingleStore"
+    slice: A
+    feed: https://www.singlestore.com/blog/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11T16:06:37+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Slack Engineering"
+    slice: A
+    feed: https://slack.engineering/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-14T16:10:08+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Spotify Engineering"
+    slice: A
+    feed: https://engineering.atspotify.com/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-08T13:18:44+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Stripe"
+    slice: A
+    feed: https://stripe.com/blog/feed.rss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Vercel Engineering"
+    slice: A
+    feed: https://vercel.com/atom
+    latest_ok: "2026-09-15"
+    latest_item: 2026-09-14
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Zalando Engineering"
+    slice: A
+    feed: https://engineering.zalando.com/atom.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-01T00:00:00+02:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  # ---- Feed group; explicit slice fields determine topic ownership ----
+  - name: "Inside Java"
+    slice: B
+    feed: https://inside.java/feed.xml
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T00:00:00+00:00"
+    note: >-
+      Java and JDK internals from the Java team. Prefer technical articles over announcements and video-only posts.
+    etag: "\"6aa96604-2020\""
+    last_modified: "Tue, 15 Sep 2026 15:36:36 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Nicolai Parlog (nipafx)"
+    slice: B
+    feed: https://nipafx.dev/feed.xml
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-15"
+    note: >-
+      Java language features, JDK evolution and practical migration trade-offs.
+    etag: "\"6aa8b0d1-7e0d25\""
+    last_modified: "Tue, 15 Sep 2026 02:43:29 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Pulumi"
+    slice: B
+    feed: https://www.pulumi.com/blog/rss.xml
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11T00:00:00+00:00"
+    note: >-
+      Infrastructure as code, delivery automation and platform engineering. Prefer mechanisms and production lessons over product marketing.
+    etag: "\"5abe2630d59ceab01681e249127f14c3\""
+    last_modified: "Tue, 15 Sep 2026 19:29:07 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Anton Zhiyanov (Go)"
+    slice: B
+    feed: https://antonz.org/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-12T13:00:00+00:00"
+    last_checked: "2026-09-15"
+    etag: "\"6aa5598a-731f0\""
+    last_modified: "Sat, 12 Sep 2026 13:54:18 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Ardan Labs"
+    slice: B
+    feed: https://www.ardanlabs.com/blog/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-04-20T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    last_modified: "Mon, 14 Sep 2026 14:39:30 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Argo Project"
+    slice: B
+    feed: https://blog.argoproj.io/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-14T16:07:38+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "AWS Containers Blog"
+    slice: B
+    feed: https://aws.amazon.com/blogs/containers/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-01T15:59:57+00:00"
+    note: >-
+      Vendor blog. Provider neutrality still applies.
+    last_checked: "2026-09-15"
+    last_modified: "Mon, 14 Sep 2026 16:23:30 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Azure updates blog"
+    slice: B
+    feed: https://azure.microsoft.com/en-us/blog/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-10"
+    note: >-
+      Vendor product news. Provider neutrality still applies, so do not let this dominate a slice.
+    last_checked: "2026-09-15"
+    etag: "\"26fdda920343b729a035d1785e9c6d45-gzip\""
+    last_modified: "Mon, 14 Sep 2026 19:33:50 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Bitfield Consulting (Go)"
+    slice: B
+    feed: https://bitfieldconsulting.com/posts/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T07:22:00+00:00"
+    last_checked: "2026-09-15"
+    etag: "W/\"f8d804e1a216da165f9d7077928930fd\""
+    next_check_after: "2026-09-16"
+  - name: "CNCF"
+    slice: B
+    feed: https://www.cncf.io/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T16:24:05+00:00"
+    note: >-
+      Mixed quality. Community posts sit alongside genuine engineering write-ups.
+    last_checked: "2026-09-15"
+    etag: "\"1d58d0468bdd9cc68d002a5c36aeec5b\""
+    last_modified: "Tue, 15 Sep 2026 19:12:14 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Container Solutions"
+    slice: B
+    feed: https://blog.container-solutions.com/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-02T11:50:24+00:00"
+    last_checked: "2026-09-15"
+    etag: "\"f0ee76e8c5e37cf0173450a9327d9b3b\""
+    last_modified: "Thu, 02 Jul 2026 12:08:48 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Crossplane"
+    slice: B
+    feed: https://blog.crossplane.io/rss/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-06-23T15:08:59+00:00"
+    last_checked: "2026-09-15"
+    etag: "W/\"757c2-uCBndt9SbGT1PQWItT4mU2/4rtQ\""
+    next_check_after: "2026-09-16"
+  - name: "Dave Cheney"
+    slice: B
+    feed: https://dave.cheney.net/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2025-12-18"
+    cadence: "quiet"
+    last_checked: "2026-09-15"
+    etag: "\"50b721097a1950085839dcdc45c0d80a\""
+    next_check_after: "2026-09-22"
+  - name: "Eli Bendersky"
+    slice: B
+    feed: https://eli.thegreenplace.net/feeds/all.atom.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-27T18:52:00-07:00"
+    last_checked: "2026-09-15"
+    etag: "\"4ed6c-65a11b97b9a21\""
+    last_modified: "Fri, 28 Aug 2026 01:53:53 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Fasterthanlime"
+    slice: B
+    feed: https://fasterthanli.me/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2025-12-31"
+    cadence: "quiet"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-22"
+  - name: "Filippo Valsorda"
+    slice: B
+    feed: https://words.filippo.io/rss/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-26T11:45:08+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Flux CD"
+    slice: B
+    feed: https://fluxcd.io/blog/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-12T08:00:00+00:00"
+    last_checked: "2026-09-15"
+    etag: "\"dfb4833629bc18bce992abd026fbbb78-ssl\""
+    next_check_after: "2026-09-16"
+  - name: "Google Cloud Blog (containers)"
+    slice: B
+    feed: https://cloudblog.withgoogle.com/rss/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T17:30:00+00:00"
+    note: >-
+      Site-wide Google Cloud feed with a heavy marketing mix.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Isovalent / Cilium"
+    slice: B
+    feed: https://isovalent.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-25T07:01:00+00:00"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Kelsey-adjacent: Learnk8s"
+    slice: B
+    feed: https://learnk8s.io/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-31T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    etag: "W/\"2aee-cCCwZXNbbQEvi0A9hovNiNw74nA\""
+    next_check_after: "2026-09-16"
+  - name: "Kubernetes Blog"
+    slice: B
+    feed: https://kubernetes.io/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14T10:30:00-08:00"
+    note: >-
+      Site-wide feed. Release announcements are usually out of scope, but the per-feature deep dives published around a release often are not.
+    last_checked: "2026-09-15"
+    etag: "\"570abe31624c76b748ff1d394340d4a5-ssl\""
+    next_check_after: "2026-09-16"
+  - name: "Kubernetes Contributors"
+    slice: B
+    feed: https://www.kubernetes.dev/blog/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-27"
+    last_checked: "2026-09-15"
+    etag: "\"533d4afa61bcde60a756b835cad7ae87-ssl\""
+    next_check_after: "2026-09-16"
+  - name: "Linux Kernel: kernelnewbies"
+    slice: B
+    feed: https://kernelnewbies.org/Linux_Kernels?action=rss_rc
+    latest_ok: "2026-09-15"
+    latest_item: 2026-08-29
+    last_checked: "2026-09-15"
+    etag: "1788027396-15-0-0-0-20-0"
+    next_check_after: "2026-09-16"
+  - name: "LWN"
+    slice: B
+    feed: https://lwn.net/headlines/newrss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T14:37:30+00:00"
+    note: >-
+      Kernel and toolchain reporting. Some articles are subscriber-only for their first week.
+    last_checked: "2026-09-15"
+    etag: "\"30eddeae68ccd9aa0f09ab942b0ec3029288c35cd3b5edeffccf478ffa1471b6\""
+    next_check_after: "2026-09-16"
+  - name: "Phoronix"
+    slice: B
+    feed: https://www.phoronix.com/rss.php
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15T15:03:22-04:00"
+    note: >-
+      Benchmark heavy and often thin. Include only for genuinely surprising measurements.
+    last_checked: "2026-09-15"
+    last_modified: "Tue, 15 Sep 2026 19:29:55 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Red Hat OpenShift"
+    slice: B
+    feed: https://www.redhat.com/en/rss/blog/channel/red-hat-openshift
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Russ Cox"
+    slice: B
+    feed: https://research.swtch.com/feed.atom
+    latest_ok: "2026-09-15"
+    latest_item: "2026-01-19"
+    cadence: "quiet"
+    note: >-
+      Go technical lead. Very infrequent and almost always worth reading.
+    last_checked: "2026-09-15"
+    etag: "\"251bbf957080fd7cbd39f7a4fc28d725\""
+    last_modified: "Sat, 02 May 2026 21:06:03 GMT"
+    next_check_after: "2026-09-22"
+  - name: "Rust Blog"
+    slice: B
+    feed: https://blog.rust-lang.org/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-07"
+    last_checked: "2026-09-15"
+    etag: "\"6aa02df6-25d77\""
+    last_modified: "Tue, 08 Sep 2026 15:47:02 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Sysdig"
+    slice: B
+    feed: https://sysdig.com/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    last_modified: "Tue, 15 Sep 2026 17:52:01 GMT"
+    next_check_after: "2026-09-16"
+  - name: "The Go Blog"
+    slice: B
+    feed: https://go.dev/blog/feed.atom
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-02"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Tigera / Calico"
+    slice: B
+    feed: https://www.tigera.io/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-08T20:16:27+00:00"
+    last_checked: "2026-09-15"
+    last_modified: "Mon, 14 Sep 2026 14:16:36 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Vicki Boykis"
+    slice: B
+    feed: https://vickiboykis.com/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-01"
+    last_checked: "2026-09-15"
+    etag: "\"6a9ec16f-562b0\""
+    last_modified: "Mon, 07 Sep 2026 13:51:43 GMT"
+    next_check_after: "2026-09-16"
+  - name: "Xe Iaso"
+    slice: B
+    feed: https://xeiaso.net/blog.rss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-12T00:00:00+00:00"
+    last_checked: "2026-09-15"
+    last_modified: "Tue, 15 Sep 2026 10:05:58 GMT"
+    next_check_after: "2026-09-16"
+  # ---- Feed group; explicit slice fields determine topic ownership ----
+  - name: "Answer.AI"
+    slice: C
+    feed: https://www.answer.ai/index.xml
+    latest_ok: 2026-09-15
+    latest_item: 2026-08-19
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Armin Ronacher"
+    slice: C
+    feed: https://lucumr.pocoo.org/feed.atom
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "arXiv cs.DB (databases)"
+    slice: "A"
+    feed: https://rss.arxiv.org/rss/cs.DB
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    note: "Research papers. Establish publication and peer-review status per paper; do not infer it from arXiv hosting."
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "arXiv cs.DC (distributed)"
+    slice: "A"
+    feed: https://rss.arxiv.org/rss/cs.DC
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    note: "Research papers. Establish publication and peer-review status per paper; do not infer it from arXiv hosting."
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "arXiv cs.MA (multiagent)"
+    slice: C
+    feed: https://rss.arxiv.org/rss/cs.MA
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    note: "Research papers. Read beyond the abstract; establish publication and peer-review status per paper."
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "arXiv cs.SE (software eng)"
+    slice: C
+    feed: https://rss.arxiv.org/rss/cs.SE
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    note: "Research papers. Establish publication and peer-review status per paper; do not infer it from arXiv hosting."
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Baldur Bjarnason"
+    slice: C
+    feed: https://www.baldurbjarnason.com/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Charm"
+    slice: C
+    feed: https://charm.sh/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-03-19"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Eugene Yan"
+    slice: C
+    feed: https://eugeneyan.com/rss/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-06-21"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "GitHub Changelog"
+    slice: C
+    feed: https://github.blog/changelog/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    note: >-
+      A product changelog. Almost always out of scope, and useful only for breaking changes.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Google Research"
+    slice: C
+    feed: https://research.google/blog/rss/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-10"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Hamel Husain"
+    slice: C
+    feed: https://hamel.dev/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-12"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Hugging Face Blog"
+    slice: C
+    feed: https://huggingface.co/blog/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Import AI (Jack Clark)"
+    slice: C
+    feed: https://importai.substack.com/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-07"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Interconnects (Nathan Lambert)"
+    slice: C
+    feed: https://www.interconnects.ai/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Jay Alammar"
+    slice: C
+    feed: https://newsletter.languagemodels.co/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2025-11-03"
+    cadence: "quiet"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-22"
+  - name: "JetBrains Blog"
+    slice: C
+    feed: https://blog.jetbrains.com/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Lilian Weng"
+    slice: C
+    feed: https://lilianweng.github.io/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-04"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Martin Fowler"
+    slice: C
+    feed: https://martinfowler.com/feed.atom
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Microsoft Research"
+    slice: C
+    feed: https://www.microsoft.com/en-us/research/feed/
+    latest_ok: 2026-09-15
+    latest_item: 2026-08-31
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Mitchell Hashimoto"
+    slice: C
+    feed: https://mitchellh.com/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-07-29"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Neo4j Blog"
+    slice: C
+    feed: https://neo4j.com/blog/feed/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-07"
+    note: >-
+      Directly on the reader's patch, so weigh it for substance rather than topic fit.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "OpenAI News"
+    slice: C
+    feed: https://openai.com/news/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14"
+    note: >-
+      Mostly announcements. Include only where a real mechanism is described.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Pragmatic Engineer"
+    slice: C
+    feed: https://newsletter.pragmaticengineer.com/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    note: >-
+      Frequently paywalled beyond the opening section. Check before relying on it.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Qdrant"
+    slice: C
+    feed: https://qdrant.tech/blog/index.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2024-04-14"
+    last_checked: "2026-09-15"
+    cadence: "quiet"
+    next_check_after: "2026-09-22"
+  - name: "Replicate"
+    slice: C
+    feed: https://replicate.com/blog/rss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-08-04"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Sebastian Raschka"
+    slice: C
+    feed: https://magazine.sebastianraschka.com/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-09"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Simon Willison"
+    slice: C
+    feed: https://simonwillison.net/atom/everything/
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14"
+    note: >-
+      Very high volume including short link posts. Best used as a pointer to primary sources rather than as a source.
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Sourcegraph"
+    slice: C
+    feed: https://sourcegraph.com/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-14"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Thorsten Ball"
+    slice: C
+    feed: https://registerspill.thorstenball.com/feed
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-12"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Together AI"
+    slice: C
+    feed: https://www.together.ai/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-11"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Val Town"
+    slice: C
+    feed: https://blog.val.town/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-10"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Warp"
+    slice: C
+    feed: https://www.warp.dev/blog/feed.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-15"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Weaviate"
+    slice: C
+    feed: https://weaviate.io/blog/rss.xml
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-09"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "Zed"
+    slice: C
+    feed: https://zed.dev/blog.rss
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-01"
+    last_checked: "2026-09-15"
+    next_check_after: "2026-09-16"
+  - name: "JVM Weekly"
+    slice: "B"
+    feed: "https://www.jvm-weekly.com/feed"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-10"
+    note: "Discovery newsletter; prefer original technical sources."
+    next_check_after: "2026-09-16"
+
+  - name: "Fernando Simões"
+    slice: B
+    feed: "https://frn.sh/index.xml"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    latest_item: "2026-09-13"
+    next_check_after: "2026-09-16"
+    note: "Independent systems investigations; topic ownership may vary by article."
+
+# ---------------------------------------------------------------------------
+# Discovery and popularity signals. These are not article sources. Never
+# summarise anything from them without reading the original.
+# ---------------------------------------------------------------------------
+  # Validated during the 2026-09-15 run.
+  - name: "vondra.me"
+    slice: "A"
+    feed: "https://vondra.me/index.xml"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    next_check_after: "2026-09-16"
+signals:
+
+  - name: "GitHub Trending"
+    url: "https://github.com/trending"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    next_check_after: "2026-09-16"
+    note: "Daily ranking supplies stars today; total stars alone do not establish recent attention."
+
+
+  - name: "Hacker News front page, 100 points and above"
+    feed: https://hnrss.org/frontpage?points=100
+    latest_ok: 2026-09-15
+    note: >-
+      Use the feed to find candidates, then confirm current points and comment
+      counts on the Hacker News item page itself before citing any figure.
+    slice: "A"
+  - name: "Lobsters"
+    feed: https://lobste.rs/rss
+    latest_ok: 2026-09-15
+    slice: "A"
+  - name: "Reddit"
+    latest_ok: 2026-09-15
+    pattern: https://www.reddit.com/r/<subreddit>/.rss
+    verified_subreddits:
+      - golang
+      - kubernetes
+      - devops
+      - rust
+      - PostgreSQL
+      - LocalLLaMA
+      - softwarearchitecture
+    unverified_subreddits:
+      # Same URL pattern. Not confirmed on 2026-09-15 because the rate limit
+      # made checking all of them too slow. Expect them to work.
+      - java
+      - sre
+      - programming
+      - ExperiencedDevs
+      - dataengineering
+      - MachineLearning
+      - LLMDevs
+      - Neo4j
+      - database
+      - linux
+      - selfhosted
+    how_to_use: >-
+      Observed 2026-09-15: golang Atom parsed via curl with a full Chrome user agent;
+      devops Atom returned 403 with a shorter browser user agent. Web open failed
+      for golang. These are method-specific observations, not permanent rules.
+      Prior attempts at JSON and old.reddit.com were blocked.
+    rate_limit: >-
+      Reddit rate-limits hard. Requests about three seconds apart returned 429
+      after the first one. Requests twenty-five seconds apart, with a retry
+      after thirty seconds on a 429, succeeded for every subreddit tested.
+      Budget roughly thirty seconds per subreddit and check only a handful.
+    limitation: >-
+      The feed carries titles, permalinks, timestamps and the outbound link for
+      link posts, but it does NOT carry scores or comment counts. Reddit is
+      therefore usable for discovery only. Any points or comment figure must be
+      read from the post page itself and cited with its observation date.
+
+# ---------------------------------------------------------------------------
+# Publishers with no usable feed. Recorded so nobody rediscovers this weekly.
+# ---------------------------------------------------------------------------
+no_feed:
+
+  - name: "Yuval Hanoch Hirschenbein Sadde"
+    slice: A
+    html: "https://yuvalino.com/"
+    checked: "2026-09-15"
+    attempted_locations: ["https://yuvalino.com/rss.xml"]
+    method: "web open"
+    problem: "No feed found at this location on this date; tool safe-open error. Article accessible."
+
+  - name: "Krzysztof Ślusarski"
+    slice: B
+    html: "https://krzysztofslusarski.github.io/"
+    checked: "2026-09-15"
+    attempted_locations: ["https://krzysztofslusarski.github.io/feed.xml"]
+    method: "web open"
+    problem: "No feed found at this location on this date; tool safe-open error. Article accessible."
+
+
+  - name: "Jenkins Blog"
+    slice: B
+    html: https://www.jenkins.io/blog/
+    checked: 2026-09-15
+    problem: >-
+      No feed found at https://www.jenkins.io/node/atom.xml on this date
+      (HTTP 404 via Python urllib). The article index is accessible.
+    note: >-
+      CI/CD pipelines, build infrastructure and delivery reliability.
+
+  - name: "Gradle Blog"
+    slice: B
+    html: https://blog.gradle.org/
+    checked: 2026-09-15
+    problem: >-
+      No feed found at https://blog.gradle.org/feed.xml on this date
+      (HTTP 404 via Python urllib). The article index is accessible.
+    note: >-
+      Java build performance, dependency management, testing and build security.
+
+  - name: "Uber Engineering"
+    html: https://www.uber.com/en-GB/blog/engineering/
+    checked: 2026-09-15
+    problem: >-
+      Every feed path tried returns HTTP 406 or 404, including with a browser
+      user agent, and the Medium mirror is gone. The HTML index lists titles
+      and dates, but article pages render as a JavaScript application and
+      return only navigation markup. Treat Uber articles as unreadable unless
+      a mirror turns up.
+    slice: "A"
+  - name: "LinkedIn Engineering"
+    html: https://www.linkedin.com/blog/engineering
+    checked: 2026-09-15
+    problem: "All feed paths return 404, and the site requires a session."
+    slice: "A"
+  - name: "DoorDash Engineering"
+    html: https://careersatdoordash.com/blog/
+    checked: 2026-09-15
+    problem: "Feed returns HTTP 403 to fetchers."
+    slice: "A"
+  - name: "Cockroach Labs"
+    html: https://www.cockroachlabs.com/blog/
+    checked: 2026-09-15
+    problem: "No feed at rss.xml, feed/ or index.xml. All 404."
+    slice: "A"
+  - name: "Confluent"
+    html: https://www.confluent.io/blog/
+    checked: 2026-09-15
+    problem: "No feed at feed/ or rss/. All 404."
+    slice: "A"
+  - name: "Anthropic"
+    html: https://www.anthropic.com/engineering
+    checked: 2026-09-15
+    problem: "No feed found at any path tried. All 404."
+    slice: "C"
+  - name: "Cursor"
+    html: https://cursor.com/blog
+    checked: 2026-09-15
+    problem: "No feed at rss.xml or feed.xml. All 404."
+    slice: "C"
+  - name: "LangChain"
+    html: https://blog.langchain.com/
+    checked: 2026-09-15
+    problem: "The /rss/ path returns HTML rather than a feed."
+    slice: "C"
+  - name: "TigerBeetle"
+    html: https://tigerbeetle.com/blog/
+    checked: 2026-09-15
+    problem: "No feed at any common path. All 404."
+    slice: "A"
+  - name: "Jepsen"
+    html: https://jepsen.io/analyses
+    checked: 2026-09-15
+    problem: >-
+      aphyr.com/posts.atom returns HTTP 451 and jepsen.io/analyses.atom returns
+      404. Check the analyses index by hand when a new report is rumoured.
+    slice: "A"
+  - name: "Rachel by the Bay"
+    html: https://rachelbythebay.com/w/
+    checked: 2026-09-15
+    problem: "The Atom feed repeatedly timed out. Retry occasionally."
+    slice: "A"
+  - name: "ACM Queue"
+    html: https://queue.acm.org/
+    checked: 2026-09-15
+    problem: "The published feed returns HTTP 410 Gone."
+    slice: "A"
+  - name: "Modal, Baseten, Fireworks AI, Pinecone, Chroma, LlamaIndex"
+    checked: 2026-09-15
+    problem: >-
+      No feed found at rss.xml, feed.xml or feed/ for any of these. Reach them
+      through Hacker News or Lobsters instead.
+    slice: "C"
+# ---------------------------------------------------------------------------
+# Dormant feeds: check monthly; a fresh signal can bring a check forward.
+# ---------------------------------------------------------------------------
+dormant:
+  - name: "The Morning Paper (Adrian Colyer)"
+    feed: https://blog.acolyer.org/feed/
+    latest_item: "2021-02-08T14:46:00+00:00"
+    slice: "A"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Kubernetes talks (Tim Hockin, Speaker Deck)"
+    feed: https://speakerdeck.com/thockin.atom
+    latest_item: "2023-11-18"
+    slice: "B"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    etag: "W/\"2b19a7078528e787d98bf5d6f0465008\""
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Without Boats"
+    feed: https://without.boats/index.xml
+    latest_item: "2024-10-25"
+    slice: "B"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    etag: "\"6796cde6-1d057\""
+    last_modified: "Mon, 27 Jan 2025 00:05:58 GMT"
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Go Time (Changelog)"
+    feed: https://changelog.com/gotime/feed
+    latest_item: "2024-12-18"
+    slice: "B"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    etag: "W/\"ef19ed59596676aa3b99f400496e58e8\""
+    last_modified: "Fri, 03 Jan 2025 20:56:21 GMT"
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Chip Huyen"
+    feed: https://huyenchip.com/feed.xml
+    latest_item: "2025-01-16"
+    slice: "C"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Neo4j Developer Blog"
+    feed: https://neo4j.com/developer-blog/feed/
+    latest_item: "2025-02-10"
+    note: "Superseded by the main Neo4j blog, which is active."
+    slice: "A"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Aqua Security"
+    feed: https://blog.aquasec.com/rss.xml
+    latest_item: "2025-05-06"
+    slice: "B"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    etag: "\"3932cb4fb05b2cac32e0977c59c6f914\""
+    last_modified: "Mon, 14 Sep 2026 07:12:00 GMT"
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
+  - name: "Gopher Academy"
+    feed: https://blog.gopheracademy.com/index.xml
+    latest_item: "2022-05-27"
+    slice: "B"
+    last_checked: "2026-09-15"
+    latest_ok: "2026-09-15"
+    etag: "\"e779581276ed0e75605e37ce8be44e5b-ssl\""
+    cadence: "dormant"
+    next_check_after: "2026-10-15"
